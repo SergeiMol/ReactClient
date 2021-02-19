@@ -31,7 +31,6 @@ const App = () => {
 
     const logOut = () => {
         AuthService.logout();
-        return <Redirect to="/login"/>;
     };
 
 
