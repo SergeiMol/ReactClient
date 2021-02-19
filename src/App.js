@@ -37,7 +37,7 @@ const App = () => {
                 <div className="navbar-nav mr-auto">
                     {currentUser && (
                         <li className="nav-item">
-                            <Link to={"/home"} className="nav-link">
+                            <Link to={"https://modest-neumann-88d173.netlify.app/home"} className="nav-link">
                                 Home
                             </Link>
                         </li>
@@ -45,7 +45,7 @@ const App = () => {
 
                     {showModeratorBoard && (
                         <li className="nav-item">
-                            <Link to={"/mod"} className="nav-link">
+                            <Link to={"https://modest-neumann-88d173.netlify.app/mod"} className="nav-link">
                                 Moderator Board
                             </Link>
                         </li>
@@ -53,7 +53,7 @@ const App = () => {
 
                     {showAdminBoard && (
                         <li className="nav-item">
-                            <Link to={"/admin"} className="nav-link">
+                            <Link to={"https://modest-neumann-88d173.netlify.app/admin"} className="nav-link">
                                 Admin Board
                             </Link>
                         </li>
@@ -63,12 +63,12 @@ const App = () => {
                 {currentUser ? (
                     <div className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link to={"/profile"} className="nav-link">
+                            <Link to={"https://modest-neumann-88d173.netlify.app/profile"} className="nav-link">
                                 {currentUser.username}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/" className="nav-link" onClick={logOut}>
+                            <a href="https://modest-neumann-88d173.netlify.app/" className="nav-link" onClick={logOut}>
                                 LogOut
                             </a>
                         </li>
@@ -76,13 +76,13 @@ const App = () => {
                 ) : (
                     <div className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link to={"/login"} className="nav-link">
+                            <Link to={"https://modest-neumann-88d173.netlify.app/login"} className="nav-link">
                                 Login
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to={"/register"} className="nav-link">
+                            <Link to={"https://modest-neumann-88d173.netlify.app/register"} className="nav-link">
                                 Sign Up
                             </Link>
                         </li>
@@ -92,11 +92,11 @@ const App = () => {
 
             <div className="container mt-3">
                 <Switch>
-                    <Route exact path="/home" component={Home}/>
-                    <Route exact path="/login" component={Login}/>
-                    <Route exact path="/register" component={Register}/>
-                    <Route exact path="/profile" component={Profile}/>
-                    <Route path="/user" component={BoardUser}/>
+                    <Route exact path="https://modest-neumann-88d173.netlify.app/home" component={Home}/>
+                    <Route exact path="https://modest-neumann-88d173.netlify.app/login" component={Login}/>
+                    <Route exact path="https://modest-neumann-88d173.netlify.app/register" component={Register}/>
+                    <Route exact path="https://modest-neumann-88d173.netlify.app/profile" component={Profile}/>
+                    <Route path="https://modest-neumann-88d173.netlify.app/user" component={BoardUser}/>
                 </Switch>
             </div>
         </>
