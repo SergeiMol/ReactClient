@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-import AuthService from "../services/auth.service";
 import UserService from "../services/user.service";
-import authService from "../services/auth.service";
 
 const Home = () => {
     const [content, setContent] = useState([]);
@@ -67,7 +65,6 @@ const Home = () => {
     const setUsers = (users) => {
         setContent(addCheckedSectionToUsers(users));
     }
-
 
     return (
         <div>

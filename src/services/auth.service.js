@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import {Redirect} from "react-router";
+import {Redirect} from "react-router-dom";
 
 
 const API_URL = "https://molokhvei.herokuapp.com/api/auth/";
@@ -32,7 +32,7 @@ const logout = () => {
     //TODO пофиксить redirect на нормальный вид
 
     localStorage.removeItem("user");
-    localStorage.removeItem("/home")
+    return (<div><Redirect to="/login"/></div>);
     //document.location = "/login"
 };
 
