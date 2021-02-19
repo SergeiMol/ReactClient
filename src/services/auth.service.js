@@ -30,7 +30,7 @@ const login = (username, password) => {
 const logout = () => {
     //TODO пофиксить redirect на нормальный вид
     localStorage.removeItem("user");
-    document.location = "https://modest-neumann-88d173.netlify.app/login"
+    document.location = "https://peaceful-cray-63e5dd.netlify.app/login"
     //document.location = "/login"
 };
 
