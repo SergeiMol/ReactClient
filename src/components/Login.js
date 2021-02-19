@@ -4,12 +4,13 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import AuthService from "../services/auth.service";
+import {Redirect} from "react-router";
 
 const required = (value) => {
     if (!value) {
         return (
             <div className="alert alert-danger" role="alert">
-                This field  is required!
+                This field is required!
             </div>
         );
     }
@@ -45,8 +46,8 @@ const Login = (props) => {
         if (checkBtn.current.context._errors.length === 0) {
             AuthService.login(username, password).then(
                 () => {
-                    props.history.push("/home");
-                    window.location.reload();
+                    return (<div><Redirect to="/home"/></div>)
+
                 },
                 (error) => {
                     const resMessage =
