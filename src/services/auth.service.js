@@ -32,6 +32,7 @@ const logout = () => {
     //TODO пофиксить redirect на нормальный вид
 
     localStorage.removeItem("user");
+    localStorage.removeItem("/home")
     //document.location = "/login"
 };
 
