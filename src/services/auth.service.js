@@ -29,6 +29,7 @@ const login = (username, password) => {
 
 const logout = () => {
     //TODO пофиксить redirect на нормальный вид
+    
     localStorage.removeItem("user");
     document.location = "/login"
     //document.location = "/login"

@@ -11,7 +11,7 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
-import {Redirect} from "react-router";
+import {Router} from "react-router";
 
 
 const App = () => {
@@ -71,9 +71,10 @@ const App = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="" className="nav-link" onClick={logOut}>
+                            <Router><a href="" className="nav-link" onClick={logOut}>
                                 LogOut
-                            </a>
+                            </a></Router>
+
                         </li>
                     </div>
                 ) : (
