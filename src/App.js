@@ -10,6 +10,8 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
+import Redirect from "react-router/modules/Redirect";
+
 
 
 const App = () => {
@@ -28,7 +30,8 @@ const App = () => {
     }, []);
 
     const logOut = () => {
-        AuthService.logout();
+        AuthService.logout()
+        return <Redirect to="/users" />;;
     };
 
     return (
