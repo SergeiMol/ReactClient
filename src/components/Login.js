@@ -10,7 +10,7 @@ const required = (value) => {
     if (!value) {
         return (
             <div className="alert alert-danger" role="alert">
-                This field is required!
+                This field  is required!
             </div>
         );
     }
@@ -47,7 +47,8 @@ const Login = (props) => {
             AuthService.login(username, password).then(
                 () => {
                     props.history.push("/home");
-                    return (<div><Redirect to="/home"/></div>)
+                    window.location.reload();
+
                 },
                 (error) => {
                     const resMessage =
