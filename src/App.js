@@ -71,7 +71,7 @@ const App = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/" className="nav-link" onClick={logOut}>
+                            <a href="" className="nav-link" onClick={logOut}>
                                 LogOut
                             </a>
                         </li>
@@ -96,11 +96,7 @@ const App = () => {
             <div className="container mt-3">
                 <Switch>
                     <Route exact path="/home" component={Home}/>
-                    <Route exact path="/home" render={() => (
-                        Login() ? <Redirect to="/home"/> : <Login state={Login}/>
-                    )}/>
                     <Route exact path="/login" component={Login}/>
-                    {/*render={() => (<Login state={Login}/>)}/>*/}
                     <Route exact path="/register" component={Register}/>
                     <Route exact path="/profile" component={Profile}/>
                     <Route path="/user" component={BoardUser}/>
