@@ -3,7 +3,7 @@ export default function authHeader() {
 
     if (user && user.accessToken) {
         console.log(user)
-        return {"origin": user.accessToken};
+        return {"x-access-token": user.accessToken};
     } else {
         return {};
     }
