@@ -49,6 +49,7 @@ const Login = (props) => {
 
                     props.history.push("/home");
                     window.location.reload();
+                    return true
                 },
                 (error) => {
                     const resMessage =

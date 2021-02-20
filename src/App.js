@@ -96,6 +96,9 @@ const App = () => {
             <div className="container mt-3">
                 <Switch>
                     <Route exact path="/home" component={Home}/>
+                    <Route exact path="/home" render={() => (
+                        Login() ? <Redirect to="/home"/> : <Login state={Login}/>
+                    )}/>
                     <Route exact path="/login" component={Login}/>
                     {/*render={() => (<Login state={Login}/>)}/>*/}
                     <Route exact path="/register" component={Register}/>
