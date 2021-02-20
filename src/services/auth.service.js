@@ -23,8 +23,7 @@ const login = (username, password) => {
             if (response.data.accessToken) {
                 localStorage.setItem("user", JSON.stringify(response.data));
             }
-            return <Redirect to="/home"/>
-
+            return response.data;
         });
 };
 
