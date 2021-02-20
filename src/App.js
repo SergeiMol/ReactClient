@@ -95,11 +95,11 @@ const App = () => {
 
             <div className="container mt-3">
                 <Switch>
-                    <Route path="/home" component={Home}/>
-                    <Route path="/login" component={Login}/>
-                    <Route path="/register" component={Register}/>
-                    <Route path="/profile" component={Profile}/>
-                    <Route path="/user" component={BoardUser}/>
+                    <Route path="/*" render={() => <Home/>}/>
+                    <Route path="/*" render={() => <Login/>}/>
+                    <Route path="/*" render={() => <Register/>}/>
+                    <Route path="/*" render={() => <Profile/>}/>
+                    <Route path="/*" render={() => <BoardUser/>}/>
                 </Switch>
             </div>
         </>
