@@ -95,10 +95,10 @@ const App = () => {
 
             <div className="container mt-3">
                 <Switch>
-                    <Route exact path="/home" component={Home}/>
-                    <Route exact path="/login" component={Login}/>
-                    <Route exact path="/register" component={Register}/>
-                    <Route exact path="/profile" component={Profile}/>
+                    <Route path="/home" component={Home}/>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/register" component={Register}/>
+                    <Route path="/profile" component={Profile}/>
                     <Route path="/user" component={BoardUser}/>
                 </Switch>
             </div>
