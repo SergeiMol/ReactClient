@@ -7,7 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <BrowserRouter>
+    <BrowserRouter basename='/My-App/'>
         <App/>
     </BrowserRouter>,
     document.getElementById("root")

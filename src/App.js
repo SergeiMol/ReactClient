@@ -71,10 +71,9 @@ const App = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={"/login"} className="nav-link" onClick={logOut}>
+                            <a href="" className="nav-link" onClick={logOut}>
                                 LogOut
-                            </Link>
-
+                            </a>
                         </li>
                     </div>
                 ) : (
