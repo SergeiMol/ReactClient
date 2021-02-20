@@ -29,7 +29,6 @@ const Home = () => {
     useEffect(() => {
         UserService.getAllUsers().then(response => {
             setUsers(response.data);
-            console.log(localStorage)
         }).catch(err => console.error(err))
     }, []);
 
