@@ -4,6 +4,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import AuthService from "../services/auth.service";
+import {Redirect} from "react-router-dom";
 
 const required = (value) => {
     if (!value) {
@@ -47,6 +48,7 @@ const Login = (props) => {
                 () => {
                     window.location.reload();
                     props.history.push("/home");
+                    return <Redirect to="/home"/>
                 },
                 (error) => {
                     const resMessage =
