@@ -71,9 +71,10 @@ const App = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="" className="nav-link" onClick={logOut}>
+                            <Link to={"/login"} className="nav-link" onClick={logOut}>
                                 LogOut
-                            </a>
+                            </Link>
+
                         </li>
                     </div>
                 ) : (
@@ -95,11 +96,11 @@ const App = () => {
 
             <div className="container mt-3">
                 <Switch>
-                    <Route path="/*" render={() => <Home/>}/>
-                    <Route path="/*" render={() => <Login/>}/>
-                    <Route path="/*" render={() => <Register/>}/>
-                    <Route path="/*" render={() => <Profile/>}/>
-                    <Route path="/*" render={() => <BoardUser/>}/>
+                    <Route exact path="/home" component={Home}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/profile" component={Profile}/>
+                    <Route path="/user" component={BoardUser}/>
                 </Switch>
             </div>
         </>
