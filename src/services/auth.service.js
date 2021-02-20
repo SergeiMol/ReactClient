@@ -30,8 +30,10 @@ const login = (username, password) => {
 
 const logout = () => {
     //TODO пофиксить redirect на нормальный вид
-    document.location = "/login"
+    document.location = "/login";
+    window.location.reload();
     localStorage.removeItem("user");
+
     //return <div><Redirect to="/login"/></div>
 };
 
