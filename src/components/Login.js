@@ -47,9 +47,8 @@ const Login = (props) => {
             AuthService.login(username, password).then(
                 () => {
 
-                    return <Redirect to="/home"/>;
-                    //props.history.push("/home");
-                    //window.location.reload();
+                    props.history.push("/home");
+                    window.location.reload();
                 },
                 (error) => {
                     const resMessage =
