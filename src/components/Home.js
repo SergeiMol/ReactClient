@@ -86,7 +86,7 @@ const Home = () => {
                     <th className="success">Name</th>
                     <th className="warning">Email</th>
                     <th className="danger">Created at</th>
-                    <th className="info">Updated at</th>
+                    <th className="info">Last login</th>
                     <th className="status">Status</th>
                 </tr>
                 {content && content.map((user, index) => (
@@ -101,8 +101,8 @@ const Home = () => {
                         </td>
                         <td className="success">{user.username}</td>
                         <td className="warning">{user.email}</td>
-                        <td className="danger">{user.createdAt}</td>
-                        <td className="info">{user.updatedAt}</td>
+                        <td className="danger">{user.createDate.substr(0, 19).replace("T", " ")}</td>
+                        <td className="info">{user.lastLogin.substr(0, 19).replace("T", " ")}</td>
                         <td className="status">{user.status}</td>
                     </tr>
                 ))}
