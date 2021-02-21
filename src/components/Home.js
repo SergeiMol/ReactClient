@@ -101,7 +101,7 @@ const Home = () => {
                         </td>
                         <td className="success">{user.username}</td>
                         <td className="warning">{user.email}</td>
-                        <td className="danger">{user.createDate.substr(0, 19).replace("T", " ")}</td>
+                        <td className="danger">{user.createdAt.substr(0, 19).replace("T", " ")}</td>
                         <td className="info">{user.lastLogin.substr(0, 19).replace("T", " ")}</td>
                         <td className="status">{user.status}</td>
                     </tr>
